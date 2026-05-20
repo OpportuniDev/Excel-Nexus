@@ -47,17 +47,17 @@ Public Sub ClientUpdater()
     ' create new class object
 250   Set fileObj = New ClsFileModule
         
-        ' extract filename from URL
+        
 260        Dim urlParts() As String
 270         Dim headerName As String
 280         Dim nameParts As Variant
 290            Dim nameFinal As Variant
 300            Dim nameAlmost As String
 310            On Error GoTo errorhandler
-            
-
-320        urlParts = Split(fileURL, "/")  ' splits  the code and name properties from the fileobject
-330        headerName = http.getResponseHeader("Content-Disposition") ' uses the last part of URL as filename
+'extract the verified filename frome the servers response headers            
+'this prevents VBE import conflicts and file locking
+320        urlParts = Split(fileURL, "/")  
+330        headerName = http.getResponseHeader("Content-Disposition") 
 340            nameParts = Split(headerName, "=")
 350           nameAlmost = nameParts(UBound(nameParts))
 360           nameFinal = Split(nameAlmost, ".")
