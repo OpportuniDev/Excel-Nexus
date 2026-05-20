@@ -28,4 +28,4 @@ def File_handler():
 def index():
  return "Opportunidev VBA Updater"
     
-if __name__ == "__main__":    app.run(debug=True)
+if __name__ == "__main__":    app.run()
