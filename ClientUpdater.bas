@@ -35,7 +35,7 @@ Public Sub ClientUpdater()
 
 
 180  Dim fileURL As String
-190    fileURL = "http://127.0.0.1:5000/file" ''put the url here
+190    'fileURL = "webaddresshere"
     
 200    Set http = CreateObject("MSXML2.XMLHTTP")
 210    http.Open "GET", fileURL, False
