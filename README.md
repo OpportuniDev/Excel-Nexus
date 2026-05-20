@@ -4,7 +4,7 @@ Backend architechture for B2B custom Excel applications.  Includes a four part r
 
 Project Overview
 
-  This project is a deployment and maintenance framework built to manage VBA based enterprise tools. In production environments, deploying critical updates to client workbooks without interupting workflow or corrupting active modules is a notorious issue. This system bridges that gap by establishing a live secure bridge between client side workbooks and a central server
+  This project is a deployment and maintenance framework built to manage VBA based enterprise tools. In production environments, deploying critical updates to client workbooks without interrupting workflow or corrupting active modules is a notorious issue. This system bridges that gap by establishing a live secure bridge between client side workbooks and a lightweight python staging server.
   Core capabilities include: 
   - Zero downtime hot swapping of core modules programmatically without triggering VBE file locks or runtime crashes.
   - Resillient infrastucture that uses dynamic local path resolution and late bindings when possible to ensure maximum compatibility across systems
@@ -44,4 +44,4 @@ Logging and Telemtry explanation:
 
  Telemetry: 
  
-   The subroutine starts out by determining where the log file is. Two possible paths are checked. This is done assuming the possibility a computer without the one drive directory that is now standard is used. Once the correct path is determined a cdo object is configured and an email template is formatted with the error log attached. This setup requires an email that has access to password creation for applications.  
+   The subroutine starts out by determining where the log file is. Two possible paths are checked. This is done assuming the possibility a computer without the one drive directory that is now standard is used. Once the correct path is determined a cdo is configured and an email template is formatted with the error log attached. This setup requires an email that has access to password creation for applications.  
