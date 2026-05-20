@@ -55,8 +55,8 @@ Public Sub BootLoad()
 290            Dim nameFinal As Variant
 300            Dim nameAlmost As String
 310            On Error GoTo errorhandler
-            
-
+ 'extract the verified filename frome the servers response headers            
+'this prevents VBE import conflicts and file locking           
 320        urlParts = Split(fileURL, "/")
 330        headerName = http.getResponseHeader("Content-Disposition")
 340            nameParts = Split(headerName, "=")
