@@ -32,6 +32,9 @@ ClientUpdater:
 
   Next using two nested for-each loops, each module in the workbook is cycled through and compared against each fileobj in the updates collection. If it finds a matching module it removes it. The for-each loops close. Then another is started, this time adding all fileobj in the updates collection. Finally, the macro hotkey for the bootloader subroutine is then set.
 
+  ClsFileModule:
+  A class object consisting of two string fields acting as a container holding two distinct data points from the http stream.
+
   Bootloader:
   
   Essentially identical to the ClientUpdater. The macro hotkey assignment is setting the hotkey for the ClientUpdater and vice-versa.  This setup is important as the AB setup solves the issue of trying to hotswap a module currently in use. if the ClientUpdater needs to be updated then the Bootloader is used. The inverse is also true. 
