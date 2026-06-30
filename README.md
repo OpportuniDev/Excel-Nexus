@@ -48,3 +48,25 @@ Logging and Telemtry explanation:
  Telemetry: 
  
    The subroutine starts out by determining where the log file is. Two possible paths are checked. This is done assuming the possibility a computer without the one drive directory that is now standard is used. Once the correct path is determined a cdo is configured and an email template is formatted with the error log attached. This setup requires an email that has access to password creation for applications.  
+
+
+Set up
+
+  MasterUpdater - Import to your personal workbook or whichever workbook you prefer as a terminal. Executed directly from the vba environment window.
+
+  VBAflaskupdater - This can deployed on any machine or server that supports Python and Flask
+
+  ClientUpdater, Bootloader, Clsfilemodule, Errlogger, Telemetry - Import to end user/client workbook
+
+
+
+
+Important notes
+
+1.The python script was not built with a way to delete files so the process must be terminated in order to perform a cleanup
+
+2. As stated in the explanation of the ClientUpdater, it is important that the end user has "Trust access to the VBA project object model" checked for only the duration of the update.
+
+
+
+  
