@@ -32,6 +32,9 @@ ClientUpdater:
 
   Next using two nested for-each loops, each module in the workbook is cycled through and compared against each fileobj in the updates collection. If it finds a matching module it removes it. The for-each loops close. Then another is started, this time adding all fileobj in the updates collection. Finally, the macro hotkey for the bootloader subroutine is then set.
 
+  AutoKeyset:
+  Sets the hotkeys when the user opens their wb.
+  
   ClsFileModule:
   A class object consisting of two string fields acting as a container holding two distinct data points from the http stream.
 
@@ -58,7 +61,7 @@ Replace "webaddress" with the url or localhost where the flask server is hosted.
 
   VBAflaskupdater - This can deployed on any machine or server that supports Python and Flask (vscode for local server or glitch for example)
 
-  ClientUpdater, Bootloader, Clsfilemodule, Errlogger, Telemetry - Import to end user/client workbook
+  ClientUpdater, Bootloader, AutoKeyset, Clsfilemodule, Errlogger, Telemetry - Import to end user/client workbook
  
 in ClientUpdater/Bootloader line (38/190)remove the ' at fileurl = x and add replace with server address.
 
@@ -74,6 +77,9 @@ Important notes
 
 3.Telemetry may not work for larger companies due to CDO triggering IT flags or if you can't generate an application password on your email platform.
 
+4.AutoKeyset uses Auto_Open()  in order to map the keys every time the user opens the workbook. Conversely you can move this code into the workbook_open event if preferential. 
+
+5. Hotkeys are set as follows : Ctrl+u activates ClientUpdater, Ctrl+b activates Bootloader.
 
 
   
