@@ -81,5 +81,7 @@ Important notes
 
 5. Hotkeys are set as follows : Ctrl+u activates ClientUpdater, Ctrl+b activates Bootloader.
 
+6. The comparison used to update or add modules is based on the module/vb attribute name. Its important to make sure the file uploaded through the master updater shares the same name as the file was originally created with.  Otherwise it will just add it and could cause a crash with two modules of code attempting to do similar things concurrently 
+
 
   
