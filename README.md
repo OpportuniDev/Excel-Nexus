@@ -54,10 +54,15 @@ Set up
 
   MasterUpdater - Import to your personal workbook or whichever workbook you prefer as a terminal. Executed directly from the vba environment window.
 
-  VBAflaskupdater - This can deployed on any machine or server that supports Python and Flask
+Replace "webaddress" with the url or localhost where the flask server is hosted.(line73/340)
+
+  VBAflaskupdater - This can deployed on any machine or server that supports Python and Flask (vscode for local server or glitch for example)
 
   ClientUpdater, Bootloader, Clsfilemodule, Errlogger, Telemetry - Import to end user/client workbook
+ 
+in ClientUpdater/Bootloader line (38/190)remove the ' at fileurl = x and add replace with server address.
 
+in Telemetry (lines 44,45,52,53). replace email and password with your email and application password
 
 
 
@@ -66,6 +71,8 @@ Important notes
 1.The python script was not built with a way to delete files so the process must be terminated in order to perform a cleanup
 
 2. As stated in the explanation of the ClientUpdater, it is important that the end user has "Trust access to the VBA project object model" checked for only the duration of the update.
+
+3.Telemetry may not work for larger companies due to CDO triggering IT flags or if you can't generate an application password on your email platform.
 
 
 
