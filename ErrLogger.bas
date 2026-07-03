@@ -25,7 +25,7 @@ Public Sub ErrLog(errsource As String, subname As String, errnum As Long, errdes
         Print #fNum, jsonstring & vbNewLine
     Close #fNum
 
-call sendTelemtry 
+Call sendTelemetry 
 
     End Sub
 
